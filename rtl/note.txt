@@ -1,0 +1,3 @@
+1. clk_wiz_1: convert clock frequency from 156.25MHz to 100MHz.
+2. l_ethernet_0: 40g ethernet interface.
+3. vio_0: provide virtual input/output ports.

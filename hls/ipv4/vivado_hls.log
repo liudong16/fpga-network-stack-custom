@@ -1,0 +1,278 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/Vivado_2018.1/install/Vivado/2018.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/Vivado_2018.1/install/Vivado/2018.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'root' on host '192-168-1-203' (Linux_x86_64 version 3.10.0-693.11.1.el7.x86_64) on Sat Dec 15 21:43:11 CST 2018
+INFO: [HLS 200-10] In directory '/home/liudong16/research/tcp_offload/fpga-network-stack/hls_128bit/ipv4'
+INFO: [HLS 200-10] Opening project '/home/liudong16/research/tcp_offload/fpga-network-stack/hls_128bit/ipv4/ipv4_prj'.
+INFO: [HLS 200-10] Adding design file '../packet.hpp' to the project
+INFO: [HLS 200-10] Adding design file 'ipv4.hpp' to the project
+INFO: [HLS 200-10] Adding design file 'ipv4.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/liudong16/research/tcp_offload/fpga-network-stack/hls_128bit/ipv4/ipv4_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-e'
+INFO: [HLS 200-10] Analyzing design file 'ipv4.cpp' ...
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&s_axis_rx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&m_axis_rx_meta' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&m_axis_rx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&s_axis_tx_meta' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&s_axis_tx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&m_axis_tx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 460.520 ; gain = 18.984 ; free physical = 670 ; free virtual = 15445
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 460.520 ; gain = 18.984 ; free physical = 664 ; free virtual = 15445
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 460.961 ; gain = 19.426 ; free physical = 645 ; free virtual = 15435
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'ipv4Header<128>::getLength' (./ipv4.hpp:96) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::parseWord' into 'process_ipv4' (ipv4.cpp:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::isReady' into 'process_ipv4' (ipv4.cpp:47) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::getHeaderLength' into 'process_ipv4' (ipv4.cpp:52) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::getSrcAddr' into 'process_ipv4' (ipv4.cpp:53) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::getLength' into 'process_ipv4' (ipv4.cpp:53) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'ipv4Header<128>::setLength' (./ipv4.hpp:92) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setLength' into 'generate_ipv4' (ipv4.cpp:193) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setDstAddr' into 'generate_ipv4' (ipv4.cpp:194) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setSrcAddr' into 'generate_ipv4' (ipv4.cpp:195) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setProtocol' into 'generate_ipv4' (ipv4.cpp:196) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::consumeWord' into 'generate_ipv4' (ipv4.cpp:202) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::consumePartialWord' into 'generate_ipv4' (ipv4.cpp:221) automatically.
+WARNING: [SYNCHK 200-23] ./../packet.hpp:60: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 588.867 ; gain = 147.332 ; free physical = 633 ; free virtual = 15427
+INFO: [XFORM 203-1101] Packing variable 'm_axis_rx_meta.V' (ipv4.cpp:246) into a 48-bit variable.
+INFO: [XFORM 203-1101] Packing variable 's_axis_tx_meta.V' (ipv4.cpp:248) into a 48-bit variable.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'reverse<16>' (./../axi_utils.hpp:72).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (./../axi_utils.hpp:75) in function 'reverse<16>' completely.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'ipv4Header<128>::getLength' (./ipv4.hpp:96) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::parseWord' into 'process_ipv4' (ipv4.cpp:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::isReady' into 'process_ipv4' (ipv4.cpp:47) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::getHeaderLength' into 'process_ipv4' (ipv4.cpp:52) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::getSrcAddr' into 'process_ipv4' (ipv4.cpp:53) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::getLength' into 'process_ipv4' (ipv4.cpp:53) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'ipv4Header<128>::setLength' (./ipv4.hpp:92) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setLength' into 'generate_ipv4' (ipv4.cpp:193) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setDstAddr' into 'generate_ipv4' (ipv4.cpp:194) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setSrcAddr' into 'generate_ipv4' (ipv4.cpp:195) automatically.
+INFO: [XFORM 203-602] Inlining function 'ipv4Header<128>::setProtocol' into 'generate_ipv4' (ipv4.cpp:196) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::consumeWord' into 'generate_ipv4' (ipv4.cpp:202) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 160>::consumePartialWord' into 'generate_ipv4' (ipv4.cpp:221) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'ipv4', detected/extracted 4 process function(s): 
+	 'process_ipv4'
+	 'drop_optional_header'
+	 'lshiftWordByOctet<128, 2>'
+	 'generate_ipv4'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./../packet.hpp:58:3) to (./../packet.hpp:73:2) in function 'process_ipv4'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./../axi_utils.hpp:448:4) to (./../axi_utils.hpp:486:9) in function 'lshiftWordByOctet<128, 2>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (ipv4.cpp:202:7) to (ipv4.cpp:216:3) in function 'generate_ipv4'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (ipv4.cpp:220:4) to (ipv4.cpp:229:3) in function 'generate_ipv4'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 588.867 ; gain = 147.332 ; free physical = 598 ; free virtual = 15399
+WARNING: [XFORM 203-631] Renaming function 'lshiftWordByOctet<128, 2>' to 'lshiftWordByOctet' (./../axi_utils.hpp:46:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 652.434 ; gain = 210.898 ; free physical = 565 ; free virtual = 15368
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ipv4' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_ipv4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'process_ipv4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+WARNING: [SCHED 204-21] Estimated clock period (4.41231ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('packetHeader<128, 160>.idx', ipv4.cpp:45) on static variable 'header_idx' (0 ns)
+	'add' operation ('tmp_9_i_i', ./../packet.hpp:58->ipv4.cpp:45) (1.45 ns)
+	'icmp' operation ('tmp_i_i', ./../packet.hpp:58->ipv4.cpp:45) (1.12 ns)
+	'xor' operation ('not_tmp_i_i', ./../packet.hpp:58->ipv4.cpp:45) (0.337 ns)
+	multiplexor before 'phi' operation ('write_flag_1_i_i', ./../packet.hpp:58->ipv4.cpp:45) with incoming values : ('not_tmp_i_i', ./../packet.hpp:58->ipv4.cpp:45) (0.835 ns)
+	'phi' operation ('write_flag_1_i_i', ./../packet.hpp:58->ipv4.cpp:45) with incoming values : ('not_tmp_i_i', ./../packet.hpp:58->ipv4.cpp:45) (0 ns)
+	'or' operation ('packetHeader<128, 160>.ready', ./../packet.hpp:73->ipv4.cpp:45) (0.337 ns)
+	'and' operation ('p_packetHeader_ready_s', ipv4.cpp:57) (0.337 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.13 seconds; current allocated memory: 130.872 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 131.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'drop_optional_header'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'drop_optional_header'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (4.044ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	fifo read on port 'rx_process2dropLengt_1' (ipv4.cpp:86) (1.4 ns)
+	'icmp' operation ('icmp', ipv4.cpp:87) (0.724 ns)
+	multiplexor before 'phi' operation ('storemerge_i') (0.835 ns)
+	'phi' operation ('storemerge_i') (0 ns)
+	'store' operation (ipv4.cpp:89) of variable 'storemerge_cast_i', ipv4.cpp:89 on static variable 'doh_state' (1.09 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 131.850 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 132.189 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lshiftWordByOctet'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'lshiftWordByOctet'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 132.407 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 132.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generate_ipv4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'generate_ipv4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (3.89581ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('packetHeader<128, 160>.idx', ipv4.cpp:202) on static variable 'header_idx_1' (0 ns)
+	'add' operation ('tmp_4_i_i', ./../packet.hpp:90->ipv4.cpp:202) (1.45 ns)
+	'icmp' operation ('tmp_5_i_i', ./../packet.hpp:90->ipv4.cpp:202) (1.12 ns)
+	'select' operation ('packetHeader_idx_i_i', ./../packet.hpp:90->ipv4.cpp:202) (0.411 ns)
+	'store' operation (ipv4.cpp:202) of variable 'packetHeader_idx_i_i', ./../packet.hpp:90->ipv4.cpp:202 on static variable 'header_idx_1' (0.918 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 133.092 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 133.567 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ipv4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 133.715 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 134.170 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_ipv4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'header_ready' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_idx' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_header_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'metaWritten' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_ipv4'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 135.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'drop_optional_header'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'doh_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'length_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_data_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_keep_V_1' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'drop_optional_header'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 137.077 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lshiftWordByOctet'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'ls_writeRemainder' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_data_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_keep_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ls_firstWord' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lshiftWordByOctet'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 138.939 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generate_ipv4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'gi_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_idx_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_header_V_1' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generate_ipv4'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 140.443 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ipv4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/s_axis_rx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/s_axis_rx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/s_axis_rx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/m_axis_rx_meta_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/m_axis_rx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/m_axis_rx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/m_axis_rx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/s_axis_tx_meta_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/s_axis_tx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/s_axis_tx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/s_axis_tx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/m_axis_tx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/m_axis_tx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/m_axis_tx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ipv4/local_ipv4_address_V' to 'ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ipv4' to 'ap_ctrl_none' (register).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ipv4'.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 142.807 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'ipv4_fifo_w128_d8_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ipv4_fifo_w16_d8_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ipv4_fifo_w1_d8_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ipv4_fifo_w4_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ipv4_fifo_w128_d8_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ipv4_fifo_w16_d8_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ipv4_fifo_w1_d8_A' using Shift Registers.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 'm_axis_rx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 's_axis_tx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 652.434 ; gain = 210.898 ; free physical = 531 ; free virtual = 15347
+INFO: [SYSC 207-301] Generating SystemC RTL for ipv4 with prefix ipv4_.
+INFO: [VHDL 208-304] Generating VHDL RTL for ipv4 with prefix ipv4_.
+INFO: [VLOG 209-307] Generating Verilog RTL for ipv4 with prefix ipv4_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 'm_axis_rx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 's_axis_tx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/Vivado_2018.1/install/Vivado/2018.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 21:44:02 2018...
+INFO: [HLS 200-112] Total elapsed time: 53.25 seconds; peak allocated memory: 142.807 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Dec 15 21:44:03 2018...

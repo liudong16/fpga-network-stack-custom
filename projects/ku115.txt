@@ -1,0 +1,7 @@
+udp/ip stack offload project make steps:
+1. new project file
+2. add sources in /rtl
+3. make ip files in /hls and add sources
+4. add .xdc file in /constraint
+5. synthesis and implement
+6. download .bit file to ku115 board

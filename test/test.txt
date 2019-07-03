@@ -1,0 +1,5 @@
+test steps:
+1. download moongen from github;
+2. send packets from moongen and receive packets on fpga;//using l3-load-latency-liudong16.lua
+3. send packets from fpga and receive on moongen;
+4. support duplex mode; 

@@ -1,0 +1,28 @@
+INFO: [HLS 200-10] Running '/home/Vivado_2018.1/install/Vivado/2018.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'root' on host '192-168-1-203' (Linux_x86_64 version 3.10.0-693.11.1.el7.x86_64) on Sun Oct 28 19:38:44 CST 2018
+INFO: [HLS 200-10] In directory '/home/liudong16/research/tcp_offload/fpga-network-stack/hls/arp_server_subnet'
+INFO: [HLS 200-10] Opening project '/home/liudong16/research/tcp_offload/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet_prj'.
+INFO: [HLS 200-10] Opening solution '/home/liudong16/research/tcp_offload/fpga-network-stack/hls/arp_server_subnet/arp_server_subnet_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-e'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-200] Port 'arpDataOut_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'arpDataOut_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'arpDataOut_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 'macIpEncode_rsp_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+WARNING: [IMPL 213-401] TDATA of AXI4-Stream interface 'm_axis_arp_lookup_reply' is not aligned to byte boundaries. It is padded to 56 bits.
+INFO: [IMPL 213-200] Port 'arpDataIn_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'arpDataIn_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'arpDataIn_V_last_V' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'macIpEncode_req_V_V' is mapped to 'TDATA' by default.
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/Vivado_2018.1/install/Vivado/2018.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 28 19:39:13 2018...

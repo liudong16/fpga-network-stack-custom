@@ -1,0 +1,338 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/Vivado_2018.1/install/Vivado/2018.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/Vivado_2018.1/install/Vivado/2018.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'root' on host '192-168-1-203' (Linux_x86_64 version 3.10.0-693.11.1.el7.x86_64) on Sun Dec 16 09:42:00 CST 2018
+INFO: [HLS 200-10] In directory '/home/liudong16/research/tcp_offload/fpga-network-stack/hls_128bit/udp'
+INFO: [HLS 200-10] Opening project '/home/liudong16/research/tcp_offload/fpga-network-stack/hls_128bit/udp/udp_prj'.
+INFO: [HLS 200-10] Adding design file '../packet.hpp' to the project
+INFO: [HLS 200-10] Adding design file 'udp.hpp' to the project
+INFO: [HLS 200-10] Adding design file 'udp.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/liudong16/research/tcp_offload/fpga-network-stack/hls_128bit/udp/udp_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-e'
+INFO: [HLS 200-10] Analyzing design file 'udp.cpp' ...
+WARNING: [HLS 200-40] In file included from udp.cpp:1:
+udp.cpp:87:10: warning: enumeration value 'HEADER' not handled in switch [-Wswitch]
+ switch (state)
+         ^
+1 warning generated.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&s_axis_rx_meta' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&s_axis_rx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&m_axis_rx_meta' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&m_axis_rx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&s_axis_tx_meta' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&s_axis_tx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&m_axis_tx_meta' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&m_axis_tx_data' is deprecated. Please use the interface directive to specify the AXI interface.
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 460.516 ; gain = 18.984 ; free physical = 428 ; free virtual = 15003
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 460.516 ; gain = 18.984 ; free physical = 422 ; free virtual = 15003
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 460.930 ; gain = 19.398 ; free physical = 400 ; free virtual = 14993
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::getDstPort' (./udp.hpp:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::getSrcPort' (./udp.hpp:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::getLength' (./udp.hpp:107) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 64>::parseWord' into 'process_udp' (udp.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 64>::isReady' into 'process_udp' (udp.cpp:50) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::getDstPort' into 'process_udp' (udp.cpp:53) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::getSrcPort' into 'process_udp' (udp.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::getLength' into 'process_udp' (udp.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'assignDest<net_axis<128> >' into 'rshiftWordByOctet<net_axis<128>, 128, 2>' (./../axi_utils.hpp:383) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::setDstPort' (./udp.hpp:95) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::setSrcPort' (./udp.hpp:87) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::setLength' (./udp.hpp:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::setDstPort' into 'generate_udp' (udp.cpp:94) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::setSrcPort' into 'generate_udp' (udp.cpp:95) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::setLength' into 'generate_udp' (udp.cpp:96) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 64>::consumePartialWord' into 'generate_udp' (udp.cpp:118) automatically.
+WARNING: [SYNCHK 200-23] ./../packet.hpp:60: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 588.855 ; gain = 147.324 ; free physical = 392 ; free virtual = 14986
+INFO: [XFORM 203-1101] Packing variable 's_axis_rx_meta.V' (udp.cpp:187) into a 48-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'm_axis_rx_meta.V' (udp.cpp:189) into a 80-bit variable.
+INFO: [XFORM 203-1101] Packing variable 's_axis_tx_meta.V' (udp.cpp:191) into a 80-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'm_axis_tx_meta.V' (udp.cpp:193) into a 48-bit variable.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'reverse<16>' (./../axi_utils.hpp:72).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (./../axi_utils.hpp:75) in function 'reverse<16>' completely.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::getDstPort' (./udp.hpp:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::getSrcPort' (./udp.hpp:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::getLength' (./udp.hpp:107) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 64>::parseWord' into 'process_udp' (udp.cpp:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 64>::isReady' into 'process_udp' (udp.cpp:50) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::getDstPort' into 'process_udp' (udp.cpp:53) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::getSrcPort' into 'process_udp' (udp.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::getLength' into 'process_udp' (udp.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::setDstPort' (./udp.hpp:95) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::setSrcPort' (./udp.hpp:87) automatically.
+INFO: [XFORM 203-602] Inlining function 'reverse<16>' into 'udpHeader<128>::setLength' (./udp.hpp:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::setDstPort' into 'generate_udp' (udp.cpp:94) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::setSrcPort' into 'generate_udp' (udp.cpp:95) automatically.
+INFO: [XFORM 203-602] Inlining function 'udpHeader<128>::setLength' into 'generate_udp' (udp.cpp:96) automatically.
+INFO: [XFORM 203-602] Inlining function 'packetHeader<128, 64>::consumePartialWord' into 'generate_udp' (udp.cpp:118) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'udp', detected/extracted 6 process function(s): 
+	 'process_udp'
+	 'rshiftWordByOctet<net_axis<128>, 128, 2>'
+	 'merge_rx_meta'
+	 'split_tx_meta'
+	 'lshiftWordByOctet<128, 1>'
+	 'generate_udp'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./../axi_utils.hpp:448:4) to (./../axi_utils.hpp:486:9) in function 'lshiftWordByOctet<128, 1>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (udp.cpp:117:4) to (udp.cpp:125:3) in function 'generate_udp'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 588.855 ; gain = 147.324 ; free physical = 357 ; free virtual = 14957
+WARNING: [XFORM 203-631] Renaming function 'rshiftWordByOctet<net_axis<128>, 128, 2>' to 'rshiftWordByOctet' (./../axi_utils.hpp:46:5)
+WARNING: [XFORM 203-631] Renaming function 'lshiftWordByOctet<128, 1>' to 'lshiftWordByOctet' (./../axi_utils.hpp:46:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 652.430 ; gain = 210.898 ; free physical = 307 ; free virtual = 14910
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'udp' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_udp'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'process_udp'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (2.928ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('packetHeader<128, 64>.idx', udp.cpp:49) on static variable 'pu_header_idx' (0 ns)
+	'add' operation ('packetHeader_idx_i_i', ./../packet.hpp:67->udp.cpp:49) (1.42 ns)
+	multiplexor before 'phi' operation ('write_flag_1_i_i') (0.835 ns)
+	'phi' operation ('write_flag_1_i_i') (0 ns)
+	'or' operation ('packetHeader<128, 64>.ready', ./../packet.hpp:73->udp.cpp:49) (0.337 ns)
+	'and' operation ('p_packetHeader_ready_s', udp.cpp:65) (0.337 ns)
+	'store' operation (udp.cpp:49) of variable 'p_packetHeader_ready_s', udp.cpp:65 on static variable 'pu_header_ready' (0 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.07 seconds; current allocated memory: 149.642 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 150.038 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rshiftWordByOctet'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'rshiftWordByOctet'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (3.017ns) exceeds the target (target clock period: 3.2ns, clock uncertainty: 0.4ns, effective delay budget: 2.8ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	fifo read on port 'rx_udp2shiftFifo_V_d' (./../axi_utils.hpp:366) (1.4 ns)
+	'icmp' operation ('val', ./../axi_utils.hpp:382) (0.782 ns)
+	multiplexor before 'phi' operation ('sendWord.last.V') with incoming values : ('val', ./../axi_utils.hpp:382) (0.835 ns)
+	'phi' operation ('sendWord.last.V') with incoming values : ('val', ./../axi_utils.hpp:382) (0 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 150.304 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 150.529 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_rx_meta'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'merge_rx_meta'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 150.672 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 150.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'split_tx_meta'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'split_tx_meta'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 150.889 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 151.030 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lshiftWordByOctet'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'lshiftWordByOctet'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 151.278 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 151.550 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generate_udp'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'generate_udp'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 151.904 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 152.241 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'udp'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 152.400 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 152.928 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_udp'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'pu_header_ready' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pu_header_idx' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pu_header_header_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'metaWritten' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_udp'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 153.670 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rshiftWordByOctet'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'fsmState' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_data_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_keep_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'rs_firstWord' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rshiftWordByOctet'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 155.347 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_rx_meta'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_rx_meta'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 156.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'split_tx_meta'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'split_tx_meta'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 157.079 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lshiftWordByOctet'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'ls_writeRemainder' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_data_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prevWord_keep_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ls_firstWord' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lshiftWordByOctet'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 157.868 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generate_udp'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_idx' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'header_header_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generate_udp'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 159.198 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'udp'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_rx_meta_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_rx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_rx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_rx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_rx_meta_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_rx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_rx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_rx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_tx_meta_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_tx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_tx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/s_axis_tx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_tx_meta_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_tx_data_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_tx_data_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/m_axis_tx_data_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/reg_ip_address_V' to 'ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'udp/reg_listen_port_V' to 'ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'udp' to 'ap_ctrl_none' (register).
+WARNING: [RTGEN 206-101] Port 'udp/reg_ip_address_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'udp'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 161.325 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w128_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w1_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w1_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w1_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w128_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w16_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'udp_fifo_w1_d2_A' using Shift Registers.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 'm_axis_rx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 'm_axis_tx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 's_axis_rx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 's_axis_tx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 652.430 ; gain = 210.898 ; free physical = 273 ; free virtual = 14889
+INFO: [SYSC 207-301] Generating SystemC RTL for udp with prefix udp_.
+INFO: [VHDL 208-304] Generating VHDL RTL for udp with prefix udp_.
+INFO: [VLOG 209-307] Generating Verilog RTL for udp with prefix udp_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 'm_axis_rx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'm_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 'm_axis_tx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_rx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 's_axis_rx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_data_V' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_keep_V' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 's_axis_tx_data_V_last_V' is mapped to 'TLAST' by default.
+WARNING: [IMPL 213-402] The data fields of packed port 's_axis_tx_meta_V' are mapped to TDATA by default. Please use the 'port_map' option of the resource directive to specify mapping to individual AXI4-Stream ports.
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/Vivado_2018.1/install/Vivado/2018.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 16 09:43:04 2018...
+INFO: [HLS 200-112] Total elapsed time: 67.78 seconds; peak allocated memory: 161.325 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Dec 16 09:43:06 2018...

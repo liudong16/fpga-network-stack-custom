@@ -1,0 +1,17 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/usr/lib64/libc.so.6(+0x35270) [0x7fdbf5266270]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(+0xb9519) [0x7fdbf12aa519]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(Tcl_ResetResult+0x10) [0x7fdbf12aaf20]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(+0x34429) [0x7fdbf1225429]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(Tcl_EvalEx+0x13) [0x7fdbf12260a3]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(Tcl_Eval+0x15) [0x7fdbf12260c5]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libhls_support.so(+0x41d27) [0x7fdbdf543d27]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(Tcl_Finalize+0x49) [0x7fdbf1265199]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(Tcl_Exit+0x4a) [0x7fdbf126534a]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/libtcl8.5.so(Tcl_Main+0x24e) [0x7fdbf129128e]
+/home/Vivado_2017.2/install/Vivado_HLS/2017.2/lib/lnx64.o/librdi_common.so(+0x71651b) [0x7fdbf64ab51b]
+/usr/lib64/libpthread.so.0(+0x7e25) [0x7fdbef24ee25]
+/usr/lib64/libc.so.6(clone+0x6d) [0x7fdbf532934d]
